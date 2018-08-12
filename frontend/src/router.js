@@ -2,8 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home.vue'
 import AddGroup from '@/components/AddGroup.vue'
+import Login from '@/components/Login.vue'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   mode: 'history',
@@ -19,6 +20,11 @@ export default new Router({
       path: '/add',
       name: 'add-group',
       component: AddGroup
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
     },
     {
       path: '/about',

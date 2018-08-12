@@ -6,7 +6,7 @@
       <router-link class="item" to="/add">New group</router-link>
 
       <div class="right menu">
-        <a class="item">Login</a>
+        <router-link class="item" to="/login">Login</router-link>
       </div>
     </div>
     <router-view/>
