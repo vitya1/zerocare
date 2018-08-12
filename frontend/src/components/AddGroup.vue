@@ -2,6 +2,21 @@
   <div>
 
     <div class="ui form">
+      <div class="field">
+        <label>Название</label>
+        <input type="text">
+      </div>
+
+      <div class="field">
+        <label>Описание</label>
+        <textarea rows="3"></textarea>
+      </div>
+
+      <div class="field">
+        <label>Изображение</label>
+        <input type="file">
+      </div>
+
       <div class="grouped fields">
         <label>Правила добавления новых участников:</label>
         <div class="field">
