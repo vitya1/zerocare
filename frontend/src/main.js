@@ -1,11 +1,14 @@
 import Vue from 'vue'
 import 'semantic-ui-vue';
 
-//import 'semantic-ui-css/dist/semantic.min.css';
-
 import App from './App.vue'
+import router from './router'
+import store from './store'
+
+Vue.config.productionTip = false;
 
 new Vue({
-  el: '#app',
+  router,
+  store,
   render: h => h(App)
-})
+}).$mount('#app');
