@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home.vue'
 import AddGroup from '@/components/AddGroup.vue'
 import Login from '@/components/Login.vue'
+import View from '@/components/View.vue'
 
 Vue.use(Router);
 
@@ -20,6 +21,11 @@ export default new Router({
       path: '/add',
       name: 'add-group',
       component: AddGroup
+    },
+    {
+      path: '/view/:id',
+      name: 'group-view',
+      component: View
     },
     {
       path: '/login',

@@ -1,13 +1,17 @@
 <template>
   <div class="home">
 
-    <div class="ui link four cards">
+    <div class="ui four cards">
       <div class="card" v-for="group in groups">
         <div class="image">
-          <img src="../assets/image.png">
+            <img src="../assets/image.png">
         </div>
         <div class="content">
-          <div class="header">Matt Giampietro</div>
+          <div class="header">
+              <router-link :to="'/view/' + group">
+                Matt Giampietro
+              </router-link>
+          </div>
           <div class="meta">
             <a>Friends</a>
           </div>

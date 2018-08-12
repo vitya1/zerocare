@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 nconf.argv().env()
     .file(path.join(__dirname, '.env.local'))
     .defaults({
-        port: 8000,
+        port: 9000,
         host: '127.0.0.1'
     });
 
@@ -19,7 +19,12 @@ const server = http.createServer(app);
 app.use(express.static(path.join(__dirname, '../frontend/dist/')));
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
+app.get(['/', '/add', '/login', '/about'], (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/index.html'));
+});
+
+app.get('/view/:id', (req, res) => {
+    //@todo get data by id
     res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
